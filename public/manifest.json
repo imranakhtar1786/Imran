@@ -1,0 +1,17 @@
+{
+  "name": "ImranOS — Full Stack Developer Portfolio",
+  "short_name": "ImranOS",
+  "description": "Interactive Linux OS-inspired portfolio by Imran Akhtar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2c001e",
+  "theme_color": "#e95420",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
