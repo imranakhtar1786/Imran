@@ -33,7 +33,7 @@ export default function MobileLayout() {
   const winId = terminalWindow?.id;
 
   return (
-    <div className="h-[95dvh] flex flex-col overflow-hidden" style={{ background: 'var(--os-wallpaper)' }}>
+    <div className="h-[100dvh] flex flex-col overflow-hidden" style={{ background: 'var(--os-wallpaper)' }}>
       <header className="px-4 py-3 border-b border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0">
         <div className="text-accent font-bold text-sm">ImranOS</div>
         <div className="text-[10px] text-muted">{profile.name} — {profile.role}</div>
