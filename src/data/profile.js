@@ -16,13 +16,13 @@ export const profile = {
   resumeUrl: '/resume.pdf',
   links: {
     github: 'https://github.com/imranakhtar1786',
-    linkedin: 'https://linkedin.com/in/imranakhtar1786',
+    linkedin: 'https://www.linkedin.com/in/imran-akhtar-971045238',
     twitter: 'https://twitter.com/imranakhtar1786',
     portfolio: 'https://imranos.dev',
   },
   social: [
     { name: 'GitHub', url: 'https://github.com/imranakhtar1786', icon: 'github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/imranakhtar1786', icon: 'linkedin' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/imran-akhtar-971045238', icon: 'linkedin' },
     { name: 'Email', url: 'mailto:Imranakhtar1786@gmail.com', icon: 'mail' },
   ],
 };

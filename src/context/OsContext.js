@@ -106,6 +106,9 @@ function osReducer(state, action) {
       const win = createWindow(action.appId, { offset: state.windows.length, data: action.data });
       if (!win) return state;
       win.zIndex = state.nextZIndex;
+      if (typeof window !== 'undefined' && window.innerWidth <= 767) {
+        win.maximized = true;
+      }
       const sessions = { ...state.terminalSessions };
       if (action.appId === 'terminal') {
         sessions[win.id] = initialTerminalSession();
@@ -345,7 +348,10 @@ export function OsProvider({ children }) {
 
   const completeBoot = useCallback(() => {
     dispatch({ type: 'BOOT_COMPLETE' });
-  }, []);
+    if (typeof window !== 'undefined' && window.innerWidth <= 767) {
+      openApp('resume');
+    }
+  }, [openApp]);
 
   const value = useMemo(
     () => ({
