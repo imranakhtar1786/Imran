@@ -33,7 +33,7 @@ export default function MobileLayout() {
   const winId = terminalWindow?.id;
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden" style={{ background: 'var(--os-wallpaper)' }}>
+    <div className="h-[100dvh] flex flex-col overflow-hidden" style={{ background: 'var(--os-wallpaper)' }}>
       <header className="px-4 py-3 border-b border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0">
         <div className="text-accent font-bold text-sm">ImranOS</div>
         <div className="text-[10px] text-muted">{profile.name} — {profile.role}</div>
@@ -61,7 +61,7 @@ export default function MobileLayout() {
         </AnimatePresence>
       </main>
 
-      <nav className="flex border-t border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0">
+      <nav className="flex border-t border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0 pb-[env(safe-area-inset-bottom,0px)]">
         {TABS.map((t) => {
           const Icon = t.icon;
           const active = tab === t.id;
