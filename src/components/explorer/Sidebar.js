@@ -6,7 +6,7 @@ const QUICK_PATHS = [
   { label: 'Home', path: '/home/imran', icon: Home },
   { label: 'Desktop', path: '/home/imran/Desktop', icon: HardDrive },
   { label: 'Documents', path: '/home/imran/Documents', icon: FileText },
-  { label: 'Projects', path: '/home/imran/Projects', icon: Folder },
+  { label: 'Projects', path: '/home/imran/projects', icon: Folder },
 ];
 
 export default function Sidebar({ currentPath, onNavigate }) {

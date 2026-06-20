@@ -1,105 +1,209 @@
 export const projects = [
   {
-    id: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
-    shortDesc: 'Full-stack marketplace with payments and inventory',
+    id: 'nstee',
+    title: 'NSTEE — Premium E-commerce',
+    shortDesc: 'Full-stack premium T-shirt brand e-commerce platform',
     description:
-      'A scalable multi-vendor e-commerce platform built with Next.js and Django REST Framework. Features real-time inventory, Stripe payments, and admin analytics dashboard.',
-    tech: ['Next.js', 'Django', 'PostgreSQL', 'Redis', 'Stripe'],
+      'Developed a full-stack e-commerce platform for a premium T-shirt brand. Built scalable backend APIs, integrated frontend components, optimized performance with caching, and implemented a responsive shopping experience with modern UI design.',
+    tech: ['Next.js', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Zustand', 'MUI'],
     features: [
-      'Multi-vendor product catalog',
-      'Real-time cart and checkout',
-      'Stripe payment integration',
-      'Admin analytics dashboard',
-      'Search with Elasticsearch',
+      'Full-stack e-commerce store',
+      'Scalable REST APIs using Django REST Framework',
+      'Zustand-based frontend state management',
+      'Performance caching strategies with Redis',
+      'Responsive premium shopping experience with MUI',
     ],
     architecture:
-      'Microservices-inspired monolith with Next.js frontend, Django API layer, Celery workers for async tasks, and Redis for caching and sessions.',
+      'Decoupled Next.js frontend communicating with a Django API layer. Deployed with PostgreSQL as the relational database and Redis for caching data.',
     challenges:
-      'Handled high-traffic flash sales with Redis caching and database query optimization, reducing page load by 60%.',
-    links: { demo: 'https://demo.example.com', github: 'https://github.com/imranakhtar/ecommerce' },
-    status: 'Production',
-    year: '2024',
-  },
-  {
-    id: 'saas-dashboard',
-    title: 'SaaS Analytics Dashboard',
-    shortDesc: 'Real-time metrics dashboard for B2B SaaS',
-    description:
-      'Interactive analytics dashboard with real-time charts, user segmentation, and exportable reports for SaaS businesses.',
-    tech: ['React', 'Django', 'WebSockets', 'Chart.js', 'PostgreSQL'],
-    features: [
-      'Real-time WebSocket updates',
-      'Custom report builder',
-      'Role-based access control',
-      'CSV/PDF export',
-      'Dark mode UI',
-    ],
-    architecture: 'React SPA with Django Channels for WebSockets, PostgreSQL for analytics storage, and Celery for report generation.',
-    challenges: 'Implemented efficient data aggregation pipelines processing 1M+ events daily with sub-second query times.',
-    links: { demo: 'https://saas-demo.example.com', github: 'https://github.com/imranakhtar/saas-dashboard' },
-    status: 'Production',
-    year: '2023',
-  },
-  {
-    id: 'task-manager',
-    title: 'Collaborative Task Manager',
-    shortDesc: 'Kanban-style project management tool',
-    description:
-      'Team collaboration tool with Kanban boards, drag-and-drop tasks, comments, and file attachments.',
-    tech: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
-    features: ['Kanban boards', 'Drag-and-drop', 'Team workspaces', 'File attachments', 'Activity feed'],
-    architecture: 'Next.js App Router with server actions, Prisma ORM, and optimistic UI updates.',
-    challenges: 'Built conflict-free drag-and-drop with optimistic updates and rollback on failure.',
-    links: { github: 'https://github.com/imranakhtar/task-manager' },
-    status: 'Open Source',
-    year: '2023',
-  },
-  {
-    id: 'fintech-api',
-    title: 'Fintech Payment API',
-    shortDesc: 'Secure payment processing microservice',
-    description:
-      'RESTful payment API with idempotency, webhook handling, and comprehensive audit logging for fintech applications.',
-    tech: ['Django', 'DRF', 'PostgreSQL', 'Celery', 'Docker'],
-    features: ['Idempotent transactions', 'Webhook system', 'Audit logging', 'Rate limiting', 'API versioning'],
-    architecture: 'Django microservice with DRF, PostgreSQL for transactions, Redis for rate limiting, deployed on AWS ECS.',
-    challenges: 'Achieved 99.99% uptime with circuit breakers and graceful degradation during third-party outages.',
-    links: { github: 'https://github.com/imranakhtar/fintech-api' },
-    status: 'Production',
-    year: '2022',
-  },
-  {
-    id: 'portfolio-os',
-    title: 'ImranOS Portfolio',
-    shortDesc: 'This Linux desktop portfolio you are using',
-    description:
-      'Interactive Linux OS-inspired portfolio website with terminal emulator, file explorer, and draggable windows.',
-    tech: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'react-rnd'],
-    features: [
-      'Boot screen animation',
-      'Draggable windows',
-      'Terminal with 25+ commands',
-      'Virtual filesystem',
-      'Theme switching',
-    ],
-    architecture: 'Single-page Next.js app with React Context state management and client-side virtual OS layer.',
-    challenges: 'Built a full window manager in the browser without external state libraries.',
-    links: { demo: 'https://imranos.dev', github: 'https://github.com/imranakhtar/imran-os' },
+      'Optimized page loads and inventory updates under high concurrency, using query tuning and strategic Redis caching.',
+    links: { demo: 'https://nst.ee/' },
     status: 'Live',
     year: '2025',
   },
   {
-    id: 'blog-cms',
-    title: 'Headless Blog CMS',
-    shortDesc: 'Markdown-based headless CMS',
-    description: 'Lightweight headless CMS with Markdown editor, media library, and GraphQL API for content delivery.',
-    tech: ['Next.js', 'GraphQL', 'MongoDB', 'MDX'],
-    features: ['MDX editor', 'Media library', 'GraphQL API', 'SEO optimization', 'Draft preview'],
-    architecture: 'Next.js admin panel with GraphQL API layer and MongoDB for flexible content schemas.',
-    challenges: 'Implemented incremental static regeneration for 10k+ blog posts with sub-100ms TTFB.',
-    links: { github: 'https://github.com/imranakhtar/blog-cms' },
-    status: 'Open Source',
-    year: '2022',
+    id: 'arinteriors',
+    title: 'AR Interiors — Design Portfolio',
+    shortDesc: 'Professional interior design showcasing website',
+    description:
+      'Created a professional interior design portfolio website. Developed responsive layouts, interactive sections, and visually engaging pages to showcase company services, projects, and design work with improved user experience.',
+    tech: ['React.js', 'JavaScript', 'Bootstrap', 'SCSS', 'HTML5', 'CSS3'],
+    features: [
+      'Responsive design with Bootstrap & SCSS',
+      'Interactive showcase and project grids',
+      'Service offering breakdowns',
+      'Optimized graphic assets and layouts',
+    ],
+    architecture:
+      'Single Page React.js Application styled using modular SCSS files and responsive grid systems.',
+    challenges:
+      'Ensuring large, high-quality images of interior designs loaded quickly without impacting mobile usability.',
+    links: { demo: 'https://arinteriors.in/' },
+    status: 'Live',
+    year: '2024',
+  },
+  {
+    id: 'dpthub',
+    title: 'DPT Hub — 360° Digital Agency',
+    shortDesc: 'Professional portfolio and service site for a digital agency',
+    description:
+      'Developed a professional 360° digital agency portfolio website. Designed reusable components, responsive interfaces, and engaging UI sections to showcase digital marketing services, creative solutions, and company projects.',
+    tech: ['React.js', 'SCSS', 'JavaScript', 'HTML5', 'CSS3'],
+    features: [
+      'Reusable components for scalable layout creation',
+      'Interactive service sliders',
+      'Performance-optimized client portfolio displays',
+      'Fully responsive UI sections',
+    ],
+    architecture:
+      'React.js components with unified SCSS sheets, relying on modern CSS layout concepts (Flexbox/Grid).',
+    challenges:
+      'Maintained extremely clean structures and optimized component rendering to ensure a smooth scrolling experience.',
+    links: { demo: 'https://dpthub.in/' },
+    status: 'Live',
+    year: '2025',
+  },
+  {
+    id: 'abbuildcon',
+    title: 'ABBuildCon India — Construction',
+    shortDesc: 'Dynamic construction & architectural website',
+    description:
+      'Built a dynamic construction and architectural portfolio website. Integrated Supabase PostgreSQL and Storage for managing projects, images, and website content through API-based architecture with an admin panel for real-time updates.',
+    tech: ['Next.js', 'Supabase', 'PostgreSQL', 'Swiper', 'Slick Slider', 'JavaScript'],
+    features: [
+      'Dynamic CMS admin panel for content updates',
+      'Supabase storage integration for image handling',
+      'Dynamic project carousel displays',
+      'API-based content rendering',
+    ],
+    architecture:
+      'Next.js application utilizing Supabase as a Backend-as-a-Service for data storage, auth, and image hosting.',
+    challenges:
+      'Synchronizing real-time file updates in storage with local application cache, resolved using Next.js revalidation.',
+    links: { demo: 'https://abbuildcon.com/' },
+    status: 'Live',
+    year: '2025',
+  },
+  {
+    id: 'adclan',
+    title: 'Adclan — Marketing Agency',
+    shortDesc: 'Digital marketing agency website with immersive animations',
+    description:
+      'Developed a digital marketing agency website. Built responsive UI, smooth animations, PWA features, and optimized performance with Vercel deployment to showcase advertising, branding, SEO, and marketing services.',
+    tech: ['Next.js', 'React.js', 'GSAP', 'Lenis', 'Framer Motion', 'Swiper'],
+    features: [
+      'Smooth kinetic scrolling with Lenis',
+      'Advanced timeline animations using GSAP',
+      'PWA support for app-like loading and offline access',
+      'Responsive layouts and micro-interactions',
+    ],
+    architecture:
+      'Next.js application leveraging performance hooks, static site exports, and progressive asset loading.',
+    challenges:
+      'Preventing animation lag on low-end mobile devices, achieved by throttling layout calculations and utilizing GPU acceleration.',
+    links: { demo: 'https://adclan.in/' },
+    status: 'Live',
+    year: '2026',
+  },
+  {
+    id: 'elmasgroup',
+    title: 'Elmas Group — Real Estate',
+    shortDesc: 'Real estate company property showcase portal',
+    description:
+      'Developed a real estate website. Built responsive layouts, smooth animations, and optimized frontend performance with Nginx deployment on Ubuntu for a seamless property showcase experience.',
+    tech: ['Next.js', 'JavaScript', 'GSAP', 'Lenis', 'Swiper', 'Nginx', 'Ubuntu'],
+    features: [
+      'Interactive property search and filtering layouts',
+      'Smooth GSAP UI animations',
+      'Production deployment on Linux Ubuntu VPS',
+      'Nginx reverse proxy and caching optimization',
+    ],
+    architecture:
+      'Static-site generation with Next.js, deployed on an Ubuntu VPS, served through Nginx for caching and proxying.',
+    challenges:
+      'Ensuring high-speed asset delivery of real estate properties on self-managed VPS hosting.',
+    links: { demo: 'https://elmasgroup.in/' },
+    status: 'Live',
+    year: '2025',
+  },
+  {
+    id: 'vikrammills',
+    title: 'Vikram Mills Ads Platform',
+    shortDesc: 'FMCG advertising interface and product catalog',
+    description:
+      'Developed an FMCG advertising platform as a freelance project with a responsive interface to showcase products and campaigns. Implemented interactive navigation, optimized performance, and a smooth user experience.',
+    tech: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
+    features: [
+      'Campaign showcase landing layouts',
+      'Responsive product navigation interface',
+      'Optimized performance for high-traffic campaigns',
+    ],
+    architecture:
+      'Client-side React single-page app built for maximum speed and simplicity.',
+    challenges:
+      'Creating a layout that appeals directly to consumer brand managers while maintaining rapid navigation speed.',
+    links: { demo: 'https://ads.vikrammills.com/' },
+    status: 'Live',
+    year: '2025',
+  },
+  {
+    id: 'adorereal',
+    title: 'Adore Real — Lead Gen Page',
+    shortDesc: 'Real estate lead generation ads landing page',
+    description:
+      'Developed a real estate lead generation ads page with responsive layouts, interactive UI, and optimized design to showcase properties and capture customer inquiries.',
+    tech: ['Next.js', 'React.js', 'JavaScript', 'CSS3', 'Tailwind CSS'],
+    features: [
+      'Friction-free lead capture forms',
+      'Optimized performance for landing conversion rates',
+      'Responsive mobile layouts',
+    ],
+    architecture:
+      'Serverless Next.js landing page built for rapid deployments and integrated analytics tracking.',
+    challenges:
+      'Securing high page-speed scores to minimize visitor bounce rates during marketing campaigns.',
+    links: { demo: 'https://adore-real.vercel.app/' },
+    status: 'Live',
+    year: '2025',
+  },
+  {
+    id: 'rudratheme',
+    title: 'Rudra Theme — Real Estate Theme',
+    shortDesc: 'Modern real estate website theme (In Development)',
+    description:
+      'Currently developing a modern real estate website theme. Building responsive layouts, reusable components, smooth animations, and optimized performance for showcasing properties and services.',
+    tech: ['Next.js', 'React.js', 'GSAP', 'Lenis', 'Swiper', 'Lucide Icons'],
+    features: [
+      'Highly customizable modular theme components',
+      'Smooth scrolling and page transitions',
+      'Responsive search grids and property detail views',
+    ],
+    architecture:
+      'Next.js modular architecture using context and custom layout layouts for easy downstream integration.',
+    challenges:
+      'Developing components that can easily fit different developer APIs without losing animation fidelity.',
+    links: { demo: 'https://rudra-theme-first.vercel.app/' },
+    status: 'In Development',
+    year: '2026',
+  },
+  {
+    id: 'poweronelectrotech',
+    title: 'PowerOne Electrotech — MEP Company',
+    shortDesc: 'MEP (Mechanical, Electrical, Plumbing) company website',
+    description:
+      'Developed an MEP company website using React.js and Tailwind CSS. Implemented responsive layouts, service sections, project showcases, and optimized performance.',
+    tech: ['React.js', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3'],
+    features: [
+      'MEP service portfolio grids',
+      'Project showcase galleries',
+      'Responsive design using Tailwind CSS utility classes',
+    ],
+    architecture:
+      'React SPA structured around clean, componentized project highlights, built with Tailwind CSS.',
+    challenges:
+      'Formulating a complex corporate engineering service list into clean, scan-friendly landing sections.',
+    links: { demo: 'https://poweronelectrotech.in/' },
+    status: 'Live',
+    year: '2024',
   },
 ];

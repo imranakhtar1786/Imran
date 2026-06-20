@@ -8,14 +8,11 @@ import { Download, FileText } from 'lucide-react';
 
 export default function ResumeApp() {
   function handleDownload() {
-    const content = generateResumeText();
-    const blob = new Blob([content], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = `${profile.name.replace(/\s/g, '_')}_Resume.txt`;
+    a.href = '/resume.pdf';
+    a.download = `${profile.name.replace(/\s/g, '_')}_Resume.pdf`;
+    a.target = '_blank';
     a.click();
-    URL.revokeObjectURL(url);
   }
 
   return (

@@ -45,8 +45,8 @@ export default function FileExplorer() {
   function handleOpen(entry) {
     if (entry.type === 'dir') {
       navigate(entry.path);
-    } else if (entry.appId) {
-      openApp(entry.appId);
+    } else if (entry.app) {
+      openApp(entry.app, { projectId: entry.projectId });
     }
   }
 

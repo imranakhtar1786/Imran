@@ -39,7 +39,7 @@ export default function Window({ win }) {
           onMaximize={handleMaximize}
           maximized
         />
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-hidden min-h-0">
           <WindowContent windowId={win.id} appId={win.appId} />
         </div>
       </div>
@@ -67,15 +67,17 @@ export default function Window({ win }) {
         })
       }
     >
-      <TitleBar
-        title={win.title}
-        icon={app?.icon}
-        onClose={() => closeWindow(win.id)}
-        onMinimize={() => minimizeWindow(win.id)}
-        onMaximize={handleMaximize}
-      />
-      <div className="flex-1 overflow-hidden min-h-0">
-        <WindowContent windowId={win.id} appId={win.appId} />
+      <div className="w-full h-full flex flex-col overflow-hidden">
+        <TitleBar
+          title={win.title}
+          icon={app?.icon}
+          onClose={() => closeWindow(win.id)}
+          onMinimize={() => minimizeWindow(win.id)}
+          onMaximize={handleMaximize}
+        />
+        <div className="flex-1 overflow-hidden min-h-0">
+          <WindowContent windowId={win.id} appId={win.appId} />
+        </div>
       </div>
     </Rnd>
   );
@@ -84,11 +86,36 @@ export default function Window({ win }) {
 function TitleBar({ title, icon: Icon, onClose, onMinimize, onMaximize, maximized }) {
   return (
     <div className="os-titlebar shrink-0">
-      <button type="button" className="os-titlebar-btn os-titlebar-btn--close" onClick={onClose} aria-label="Close" />
-      <button type="button" className="os-titlebar-btn os-titlebar-btn--min" onClick={onMinimize} aria-label="Minimize" />
-      <button type="button" className="os-titlebar-btn os-titlebar-btn--max" onClick={onMaximize} aria-label={maximized ? 'Restore' : 'Maximize'} />
+      
+
+      <button
+        type="button"
+        className="os-titlebar-btn os-titlebar-btn--max"
+        onClick={onMaximize}
+        aria-label={maximized ? "Restore" : "Maximize"}
+        title={maximized ? "Restore window" : "Maximize window"}
+      />
+      
+
+      <button
+        type="button"
+        className="os-titlebar-btn os-titlebar-btn--min"
+        onClick={onMinimize}
+        aria-label="Minimize"
+        title="Minimize"
+      />
+      <button
+        type="button"
+        className="os-titlebar-btn os-titlebar-btn--close"
+        onClick={onClose}
+        aria-label="Close"
+        title="Close"
+      />
+
       {Icon && <Icon size={14} className="text-muted ml-1" />}
-      <span className="text-xs font-medium text-[var(--os-text)] ml-1 truncate flex-1">{title}</span>
+      <span className="text-xs font-medium text-[var(--os-text)] ml-1 truncate flex-1">
+        {title}
+      </span>
     </div>
   );
 }

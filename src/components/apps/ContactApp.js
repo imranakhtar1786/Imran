@@ -74,7 +74,7 @@ export default function ContactApp() {
             type="submit"
             className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-accent text-white text-sm font-medium border-0 cursor-pointer hover:opacity-90"
           >
-            {sent ? <><CircleCheck size={16} /> Sent!</> : <><Send size={16} /> Send Message</>}
+            {sent ? <><CheckCircle size={16} /> Sent!</> : <><Send size={16} /> Send Message</>}
           </button>
         </form>
       </motion.div>

@@ -5,14 +5,26 @@ import { normalizePath } from '@/lib/filesystem';
 
 export default function Breadcrumbs({ path, onNavigate }) {
   const normalized = normalizePath(path);
-  const parts = normalized === '/' ? [] : normalized.split('/').filter(Boolean);
+  const crumbs = [];
 
-  const crumbs = [{ label: 'Home', path: '/home/imran' }];
-  let built = '';
-  parts.forEach((part) => {
-    built += `/${part}`;
-    crumbs.push({ label: part, path: built });
-  });
+  if (normalized.startsWith('/home/imran')) {
+    crumbs.push({ label: 'Home', path: '/home/imran' });
+    const relative = normalized.slice('/home/imran'.length);
+    const parts = relative.split('/').filter(Boolean);
+    let built = '/home/imran';
+    parts.forEach((part) => {
+      built += `/${part}`;
+      crumbs.push({ label: part, path: built });
+    });
+  } else {
+    crumbs.push({ label: 'Root', path: '/' });
+    const parts = normalized.split('/').filter(Boolean);
+    let built = '';
+    parts.forEach((part) => {
+      built += `/${part}`;
+      crumbs.push({ label: part, path: built });
+    });
+  }
 
   return (
     <div className="flex items-center gap-1 text-xs text-muted overflow-x-auto py-2 px-3 border-b border-[var(--os-glass-border)]">

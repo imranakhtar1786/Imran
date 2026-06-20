@@ -145,6 +145,7 @@ export function getDirectoryContents(path) {
     app: child.app,
     projectId: child.projectId,
     content: child.content,
+    path: resolvePath(path, child.name),
   }));
 }
 

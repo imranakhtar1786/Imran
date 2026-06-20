@@ -33,13 +33,13 @@ export default function MobileLayout() {
   const winId = terminalWindow?.id;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'var(--os-wallpaper)' }}>
-      <header className="px-4 py-3 border-b border-[var(--os-glass-border)] bg-[var(--os-taskbar)]">
+    <div className="h-screen flex flex-col overflow-hidden" style={{ background: 'var(--os-wallpaper)' }}>
+      <header className="px-4 py-3 border-b border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0">
         <div className="text-accent font-bold text-sm">ImranOS</div>
         <div className="text-[10px] text-muted">{profile.name} — {profile.role}</div>
       </header>
 
-      <main className="flex-1 overflow-hidden">
+      <main className="flex-1 min-h-0 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={tab}
@@ -49,19 +49,19 @@ export default function MobileLayout() {
             className="h-full"
           >
             {tab === 'terminal' && winId && (
-              <div className="h-[calc(100vh-120px)]">
+              <div className="h-full">
                 <TerminalComponent windowId={winId} />
               </div>
             )}
-            {tab === 'projects' && <div className="h-[calc(100vh-120px)] overflow-hidden"><ProjectsApp /></div>}
-            {tab === 'resume' && <div className="h-[calc(100vh-120px)] overflow-hidden"><ResumeApp /></div>}
-            {tab === 'contact' && <div className="h-[calc(100vh-120px)] overflow-hidden"><ContactApp /></div>}
-            {tab === 'about' && <div className="h-[calc(100vh-120px)] overflow-hidden"><AboutApp /></div>}
+            {tab === 'projects' && <ProjectsApp />}
+            {tab === 'resume' && <ResumeApp />}
+            {tab === 'contact' && <ContactApp />}
+            {tab === 'about' && <AboutApp />}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      <nav className="flex border-t border-[var(--os-glass-border)] bg-[var(--os-taskbar)]">
+      <nav className="flex border-t border-[var(--os-glass-border)] bg-[var(--os-taskbar)] shrink-0">
         {TABS.map((t) => {
           const Icon = t.icon;
           const active = tab === t.id;
