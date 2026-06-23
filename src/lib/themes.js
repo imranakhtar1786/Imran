@@ -38,7 +38,7 @@ export const themes = {
 
 export const themeList = Object.values(themes);
 
-export const DEFAULT_THEME = 'ubuntu';
+export const DEFAULT_THEME = 'arch';
 
 export function applyTheme(themeId) {
   if (typeof document !== 'undefined') {
