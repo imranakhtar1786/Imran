@@ -17,7 +17,7 @@ export const projects = [
       'Decoupled Next.js frontend communicating with a Django API layer. Deployed with PostgreSQL as the relational database and Redis for caching data.',
     challenges:
       'Optimized page loads and inventory updates under high concurrency, using query tuning and strategic Redis caching.',
-    links: { demo: 'https://nst.ee/' },
+    links: { demo: 'https://nstee.in/' },
     status: 'Live',
     year: '2025',
   },
@@ -38,7 +38,7 @@ export const projects = [
       'Single Page React.js Application styled using modular SCSS files and responsive grid systems.',
     challenges:
       'Ensuring large, high-quality images of interior designs loaded quickly without impacting mobile usability.',
-    links: { demo: 'https://arinteriors.in/' },
+    links: { demo: 'https://arinteriorcurrent.vercel.app/' },
     status: 'Live',
     year: '2024',
   },
@@ -59,7 +59,7 @@ export const projects = [
       'React.js components with unified SCSS sheets, relying on modern CSS layout concepts (Flexbox/Grid).',
     challenges:
       'Maintained extremely clean structures and optimized component rendering to ensure a smooth scrolling experience.',
-    links: { demo: 'https://dpthub.in/' },
+    links: { demo: 'https://dpthub.com/' },
     status: 'Live',
     year: '2025',
   },
@@ -80,7 +80,7 @@ export const projects = [
       'Next.js application utilizing Supabase as a Backend-as-a-Service for data storage, auth, and image hosting.',
     challenges:
       'Synchronizing real-time file updates in storage with local application cache, resolved using Next.js revalidation.',
-    links: { demo: 'https://abbuildcon.com/' },
+    links: { demo: 'https://www.abbuildconindia.com/' },
     status: 'Live',
     year: '2025',
   },
@@ -205,5 +205,28 @@ export const projects = [
     links: { demo: 'https://poweronelectrotech.in/' },
     status: 'Live',
     year: '2024',
+  },
+  {
+    id: 'kiloifoods',
+    title: 'Kiloi Foods',
+    shortDesc: 'Server migration and domain transfer for a food brand',
+    description:
+      'Managed DevOps operations including server setup, domain transfer, and website migration for Kiloi Foods. Successfully transferred the domain and migrated the entire WordPress ecosystem without any data loss. Configured an Ubuntu VPS on GoDaddy with an Apache web server and MySQL database.',
+    tech: ['Ubuntu', 'Apache', 'GoDaddy VPS', 'MySQL', 'WordPress', 'DevOps'],
+    features: [
+      '100% data preservation during migration',
+      'Seamless domain transfer and DNS configuration without data loss',
+      'Production deployment on Ubuntu VPS',
+      'Apache web server setup and optimization',
+      'MySQL database migration and management',
+      'WordPress configuration and optimization',
+    ],
+    architecture:
+      'LAMP stack (Linux, Apache, MySQL, PHP) architecture running WordPress, hosted on a GoDaddy Virtual Private Server.',
+    challenges:
+      'Ensuring zero downtime during domain transfer and migrating the existing WordPress database smoothly without data loss.',
+    links: { demo: 'https://kiloifoods.com/' },
+    status: 'Live',
+    year: '2026',
   },
 ];

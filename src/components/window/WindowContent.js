@@ -10,6 +10,7 @@ import EducationApp from '@/components/apps/EducationApp';
 import ResumeApp from '@/components/apps/ResumeApp';
 import ContactApp from '@/components/apps/ContactApp';
 import SettingsApp from '@/components/apps/SettingsApp';
+import NotepadApp from '@/components/apps/NotepadApp';
 
 const APP_MAP = {
   terminal: Terminal,
@@ -22,6 +23,7 @@ const APP_MAP = {
   resume: ResumeApp,
   contact: ContactApp,
   settings: SettingsApp,
+  notepad: NotepadApp,
 };
 
 export default function WindowContent({ windowId, appId }) {
