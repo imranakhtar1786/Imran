@@ -319,7 +319,7 @@ export default function AboutApp() {
 
             <Image
 
-              src="/profile.png"
+              src="/profile-img.png"
 
               alt="Imran Akhtar Large"
 
