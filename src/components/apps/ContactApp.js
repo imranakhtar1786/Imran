@@ -32,9 +32,7 @@ export default function ContactApp() {
 
 
 
-  const SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbwZ5wP92MBk0GkxigxPBeWQsjl4Pc7WDVf0OBAr52M_BruFCdAUmE1ZBjUC2TB5o6D7qA/exec";
-
+  const SHEET_URL = process.env.NEXT_PUBLIC_SHEET_URL;
 
 
 
