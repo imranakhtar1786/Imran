@@ -22,7 +22,7 @@ const TABS = [
 
 export default function MobileLayout() {
   const { state, openApp } = useOs();
-  const [tab, setTab] = useState('resume');
+  const [tab, setTab] = useState('about');
 
   const terminalWindow = state.windows.find((w) => w.appId === 'terminal');
 
